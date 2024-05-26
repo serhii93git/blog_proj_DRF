@@ -6,7 +6,9 @@ from .models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    fields = '__all__'
+    def get_list_display(self, request):
+        return [field.name for field in Post._meta.get_fields()]
+
     search_fields = ('title', 'text')
     list_filter = ('author',)
-    readonly_fields = ('created_at', 'updated_at')
+    readonly_fields = ('time_create', 'time_update')

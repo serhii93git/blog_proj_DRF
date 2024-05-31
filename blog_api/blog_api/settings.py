@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'post.apps.PostConfig',
 
     'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'dj_rest_auth.registration',
 
     'corsheaders',
 
@@ -166,3 +169,6 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+SITE_ID = 1
+

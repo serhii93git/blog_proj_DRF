@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 
+import creator.apps
 #  from decouple import config
 
 import post.apps
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
 
     # apps:
     'post.apps.PostConfig',
+    'creator.apps.CreatorConfig',
+
 
     'rest_framework',
     'rest_framework.authtoken',

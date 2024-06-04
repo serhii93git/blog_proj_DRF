@@ -5,7 +5,7 @@ from creator.views import CreatorView
 
 router = routers.DefaultRouter()
 router.register(r'posts', PostViewSet)
-router.register(r'creator', CreatorView)
+router.register(r'creator', CreatorView, basename='creator')
 
 urlpatterns = [
         path('', include(router.urls)),

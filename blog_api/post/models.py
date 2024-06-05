@@ -1,4 +1,5 @@
 from django.db import models
+from creator.models import Creator
 
 
 class Post(models.Model):
@@ -10,7 +11,7 @@ class Post(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
 
-    author = models.CharField(max_length=50)  # to do: connect to User model
+    author = models.ForeignKey(Creator, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title

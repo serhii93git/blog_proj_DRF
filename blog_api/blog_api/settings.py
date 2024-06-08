@@ -155,14 +155,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:8080",
-#     "http://localhost:8081",
-#     "http://192.168.2.135:8080",
-#
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://localhost:8081",
+    "http://192.168.2.135:8080",
+    'http://3.95.246.201:8080',
 
-CORS_ALLOW_ALL_ORIGINS = True
+]
+
+#  CORS_ALLOW_ALL_ORIGINS = True
 
 
 AUTHENTICATION_BACKENDS = [

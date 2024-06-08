@@ -6,7 +6,7 @@ from creator.models import Creator
 class PostSerializer(serializers.ModelSerializer):
     """Serializer for Post model"""
     # text = serializers.SerializerMethodField()
-    author = serializers.SlugRelatedField(slug_field='username', queryset=Creator.objects.all())
+    author = serializers.SlugRelatedField(slug_field='username', read_only=True)
     class Meta:
         model = Post
         fields = '__all__'

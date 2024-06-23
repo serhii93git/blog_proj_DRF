@@ -9,7 +9,7 @@ class CreatorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Creator
-        fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'creator_image', 'posts')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'date_joined', 'creator_image', 'posts')
 
     def get_posts(self, obj):
         posts = obj.post_set.all()
